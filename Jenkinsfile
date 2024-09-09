@@ -15,7 +15,7 @@ pipeline {
 
         stage ('Checkout') {
             steps{
-                git url: 'https://github.com/phsinghka/maven-java-app.git'
+                git url: 'https://github.com/phsinghka/maven-java-app.git',
                     branch: '11-basic-ci-pipeline-jenkins'
             }
         }
