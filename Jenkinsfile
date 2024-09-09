@@ -57,10 +57,6 @@ pipeline {
             }
         }
 
-        stage('Notify') {
-            
-        }
-
     }
 
     post {
