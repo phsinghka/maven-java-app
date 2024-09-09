@@ -35,7 +35,7 @@ pipeline {
         stage ('Code Quality') {
             steps {
                 withSonarQubeEnv('sonarqube-server') {
-                    sh 'mvn sonar:sonar'
+                    sh 'mvn sonar:sonar -e'
                 }
             }
         }
