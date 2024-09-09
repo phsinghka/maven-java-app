@@ -32,11 +32,14 @@ pipeline {
             }
         }
 
-        stage('SonarQube Analysis') {
+        stage ('SonarQube Analysis') {
+            steps {
+
             def mvn = tool 'Maven 3.6.3';
 
             withSonarQubeEnv() {
                 sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=basic-ci-pipeline-jenkins -Dsonar.projectName='basic-ci-pipeline-jenkins'"
+            }
             }
         }
 
