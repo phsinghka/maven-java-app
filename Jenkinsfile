@@ -41,7 +41,7 @@ pipeline {
                     nexusUrl: env.NEXUS_URL,
                     groupId: 'com.example',
                     version: '1.0.0',
-                    repository: env.NEXUS_REPOSITORY,
+                    repository: env.NEXUS_REPO,
                     credentialsId: env.NEXUS_CREDENTIALS_ID,
                     artifacts: [
                         [artifactId: 'basic-app', classifier: '', file: 'target/my-app-1.0-SNAPSHOT.jar', type: 'jar']
