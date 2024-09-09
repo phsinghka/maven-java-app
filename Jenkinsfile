@@ -44,7 +44,7 @@ pipeline {
                     repository: env.NEXUS_REPOSITORY,
                     credentialsId: env.NEXUS_CREDENTIALS_ID,
                     artifacts: [
-                        [artifactId: 'basic-app', classifier: '', file: 'target/*.jar', type: 'jar']
+                        [artifactId: 'basic-app', classifier: '', file: 'target/my-app-1.0-SNAPSHOT.jar', type: 'jar']
                     ]
                 )
             }
